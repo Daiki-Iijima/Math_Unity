@@ -28,6 +28,9 @@ public class MoveStraightLine : MonoBehaviour
         Vector3 p2 = baseP2Transform.position;
 
         slope = (p2.y-p1.y) / (p2.x-p1.x);
+        Debug.Log(slope);
+        var test = Mathf.Sqrt(Mathf.Pow(p2.y - p1.y, 2) + Mathf.Pow(p2.x - p1.x,2));
+        Debug.Log(test);
         intercept = GetIntercept(p1,slope);
 
         targetPos = p2;
